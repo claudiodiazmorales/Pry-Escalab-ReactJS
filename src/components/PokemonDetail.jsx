@@ -19,7 +19,7 @@ const PokemonDetail = () => {
   return pokemon ? (
     <div className="card mt-4 text-center">
       <div className="card-body">
-        <img src={pokemon.front_default} alt={pokemon.name} className="img-fluid" />
+        <img src={pokemon.front_default} alt={pokemon.name} className="img-fluid" width="150px"/>
         <h3 className="card-title text-uppercase mt-4">{pokemon.name}</h3>
         <p className="card-text">Pokemon Nº: {pokemon.id}</p>
         <p className="card-text">Alto: {pokemon.height} | Ancho: {pokemon.weight}</p>

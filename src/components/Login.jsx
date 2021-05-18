@@ -22,7 +22,7 @@ const Login = (props) => {
     <div className="mt-5 text-center">
       <h3>Ingreso con Google</h3>
       <hr />
-      <button className="btn btn-dark"
+      <button className="btn btn-primary"
       onClick={()=>dispatch(loginUserAction())}
       disabled={loading}
       >

@@ -1,10 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Pokemons from "./components/Pokemons";
-import Login from "./components/Login";
-import Navbar from "./components/Navbar";
-import Notfound from "./components/Notfound";
-import Profile from "./components/Profile";
-
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import { auth } from "./firebase/firebase.js";
 
 import {
@@ -13,6 +7,12 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+
+const Pokemons = lazy(() => import("./components/Pokemons"));
+const Login = lazy(() => import("./components/Login"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Notfound = lazy(() => import("./components/Notfound"));
+const Profile = lazy(() => import("./components/Profile"));
 
 function App() {
   const [firebaseUser, setFirebaseUser] = useState(false);
@@ -31,35 +31,36 @@ function App() {
     fetchUser();
   }, []);
 
-  const PrivateRoute = ({component, path, ...rest})=>{
-
-    if(localStorage.getItem('user')){
-      const userStorage = JSON.parse(localStorage.getItem('user'));
-      if (userStorage.uid === firebaseUser.uid){
-        return <Route component={component} path={path} {...rest}/>
-      }else{
-        return <Redirect to="/login" {...rest}/>  
+  const PrivateRoute = ({ component, path, ...rest }) => {
+    if (localStorage.getItem("user")) {
+      const userStorage = JSON.parse(localStorage.getItem("user"));
+      if (userStorage.uid === firebaseUser.uid) {
+        return <Route component={component} path={path} {...rest} />;
+      } else {
+        return <Redirect to="/login" {...rest} />;
       }
-    }else{
-      return <Redirect to="/login" {...rest}/>
+    } else {
+      return <Redirect to="/login" {...rest} />;
     }
-  }
-
+  };
 
   return firebaseUser !== false ? (
     <Router>
-      <div className="container mt-3">
-        <Navbar />
-
-        <Switch>
-          <PrivateRoute component={Pokemons} path="/" exact />
-          <PrivateRoute component={Profile} path="/profile" exact/>
-          <Route component={Login} path="/login" exact/>
-          <Route component={Notfound}/>
-        </Switch>
-      </div>
+      <Suspense fallback={<div>holaaa...</div>}>
+        <div className="container mt-3">
+          <Navbar />
+          <Switch>
+            <PrivateRoute component={Pokemons} path="/" exact />
+            <PrivateRoute component={Profile} path="/profile" exact />
+            <Route component={Login} path="/login" exact />
+            <Route component={Notfound} />
+          </Switch>
+        </div>
+      </Suspense>
     </Router>
-  ) : (<div>cargando ...</div>);
+  ) : (
+    <div>cargando ...</div>
+  );
 }
 
 export default App;

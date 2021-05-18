@@ -17,22 +17,22 @@ const Navbar = (props) => {
   const active = useSelector(store => store.users.active);
 
   return (
-    <div className="navbar navbar-dark bg-dark">
-      <Link className="navbar-brand" to="/">APP Pokemon</Link>
+    <div className="navbar navbar-dark bg-danger">
+      <Link className="navbar-brand" to="/">Pokemón App</Link>
       <div className="d-flex">
 
       {
         active ? (
           <>
-            <NavLink className="btn btn-dark mr-2" to="/" exact>Inicio</NavLink>
-            <NavLink className="btn btn-dark mr-2" to="/profile" exact>Perfil</NavLink>
-            <button className="btn btn-dark mr-2"
+            <NavLink className="btn btn-danger mr-2" to="/" exact>Inicio</NavLink>
+            <NavLink className="btn btn-danger mr-2" to="/profile" exact>Perfil</NavLink>
+            <button className="btn btn-danger mr-2"
             onClick={()=>closeSession()}
             >Cerrar Sesión</button>
           </>
 
         ): (
-            <NavLink className="btn btn-dark mr-2" to="/login" exact>Login</NavLink>
+            <NavLink className="btn btn-danger mr-2" to="/login" exact>Login</NavLink>
         )
       }
       </div>

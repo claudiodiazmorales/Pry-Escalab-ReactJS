@@ -32,7 +32,7 @@ const Pokemons = () => {
           {pokemones.map((item) => (
             <li key={item.name} className="list-group-item text-uppercase">
             {item.name}
-            <button onClick={()=>dispatch(pokeDetailAction(item.url))} className="btn btn-dark btn-sm float-right">Info</button></li>
+            <button onClick={()=>dispatch(pokeDetailAction(item.url))} className="btn btn-primary btn-sm float-right">Info</button></li>
           ))}
         </ul>
 
