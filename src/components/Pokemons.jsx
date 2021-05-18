@@ -7,6 +7,7 @@ import {
   backPokemonsAction,
   pokeDetailAction,
 } from "../redux/pokemonDucks";
+
 import PokemonDetail from "./PokemonDetail";
 
 const Pokemons = () => {

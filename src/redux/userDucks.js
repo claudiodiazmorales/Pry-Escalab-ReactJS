@@ -1,4 +1,4 @@
-import { auth, db, firebase } from "../firebase/firebase";
+import { auth, db, storage, firebase } from "../firebase/firebase";
 
 //Data initial
 
@@ -103,3 +103,70 @@ export const closeSessionAction = () => (dispatch) => {
     type: CLOSE_SESSION,
   });
 };
+
+export const updateUserNameAction = (updateUserName) => async (dispatch, getState) => {
+  dispatch({
+    type: LOADING,
+  });
+
+  const {user} = getState().users;
+  console.log(user);
+
+
+  try {
+    await db.collection('users').doc(user.email).update({
+      displayName:updateUserName
+    });
+    const newUser={
+      ...user, 
+      displayName:updateUserName
+    } 
+    dispatch({
+      type: USER_TRUE,
+      payload: newUser
+    })
+    localStorage.setItem(
+      "user",
+      JSON.stringify(newUser)
+    );
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editPhotoAction = (editPhoto) => async (dispatch, getState) => {
+
+  dispatch({
+    type: LOADING,
+  });
+
+  const {user} = getState().users;
+
+  try {
+    const photoRef = await storage.ref().child(user.email).child('profileImg');
+    await photoRef.put(editPhoto);
+    const imgURL = await photoRef.getDownloadURL();
+
+    await db.collection('users').doc(user.email).update({
+      photoURL:imgURL
+    });
+    const newUserPhoto={
+      ...user, 
+      photoURL:imgURL
+    } 
+    dispatch({
+      type: USER_TRUE,
+      payload: newUserPhoto
+    })
+    localStorage.setItem(
+      "user",
+      JSON.stringify(newUserPhoto)
+    );
+    
+  } catch (error) {
+    console.log(error);
+  }
+
+
+}

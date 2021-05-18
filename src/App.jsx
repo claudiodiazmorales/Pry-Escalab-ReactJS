@@ -46,7 +46,15 @@ function App() {
 
   return firebaseUser !== false ? (
     <Router>
-      <Suspense fallback={<div>holaaa...</div>}>
+      <Suspense
+        fallback={
+          <div className="d-flex justify-content-center mt-3">
+            <div className="spinner-border text-primary" role="status">
+              <span className="sr-only">Loading...</span>
+            </div>
+          </div>
+        }
+      >
         <div className="container mt-3">
           <Navbar />
           <Switch>
@@ -59,7 +67,11 @@ function App() {
       </Suspense>
     </Router>
   ) : (
-    <div>cargando ...</div>
+    <div className="d-flex justify-content-center mt-3">
+      <div className="spinner-border text-primary" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
   );
 }
 
