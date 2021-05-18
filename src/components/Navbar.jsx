@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, NavLink, withRouter} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
+import Logo from '../assets/img/pokemon_logo_PNG14.png';
 
 import {closeSessionAction} from '../redux/userDucks.js';
 
@@ -18,7 +18,7 @@ const Navbar = (props) => {
 
   return (
     <div className="navbar navbar-dark bg-danger">
-      <Link className="navbar-brand" to="/">Pokemón App</Link>
+      <Link className="navbar-brand" to="/"><img src={Logo} alt="" className="img-fluid" width="200px" /></Link>
       <div className="d-flex">
 
       {

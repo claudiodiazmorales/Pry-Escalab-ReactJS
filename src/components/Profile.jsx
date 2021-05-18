@@ -48,10 +48,10 @@ const Profile = () => {
       <div className="card">
         <div className="card-body">
           <img src={user.photoURL} alt="" width="100px" className="img-fluid" />
-          <h5 className="card-title">Nombre: {user.displayName}</h5>
-          <p className="card-text">Email: {user.email}</p>
+          <h4 className="card-title mt-2">{user.displayName}</h4>
+          <h5 className="card-text">{user.email}</h5>
           <button
-            className="btn btn-primary"
+            className="btn btn-primary mt-3"
             onClick={() => setFormActive(true)}
           >
             Editar nombre

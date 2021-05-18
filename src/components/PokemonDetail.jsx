@@ -23,6 +23,7 @@ const PokemonDetail = () => {
         <h3 className="card-title text-uppercase mt-4">{pokemon.name}</h3>
         <p className="card-text">Pokemon Nº: {pokemon.id}</p>
         <p className="card-text">Alto: {pokemon.height} | Ancho: {pokemon.weight}</p>
+        <p className="card-text">Experiencia Base: {pokemon.base_experience}</p>
       </div>
     </div>
   ) : null;

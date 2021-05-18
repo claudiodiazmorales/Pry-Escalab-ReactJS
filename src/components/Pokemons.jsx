@@ -9,6 +9,7 @@ import {
 } from "../redux/pokemonDucks";
 
 import PokemonDetail from "./PokemonDetail";
+import Pokeball from '../assets/img/pokeball.png'
 
 const Pokemons = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const Pokemons = () => {
           {pokemones.map((item) => (
             <li key={item.name} className="list-group-item text-uppercase">
             {item.name}
-            <button onClick={()=>dispatch(pokeDetailAction(item.url))} className="btn btn-primary btn-sm float-right">Info</button></li>
+            <button onClick={()=>dispatch(pokeDetailAction(item.url))} className="btn btn-primary btn-sm float-right">Ver <img src={Pokeball} alt="" className="img-fluid" width="20px" /></button></li>
           ))}
         </ul>
 
