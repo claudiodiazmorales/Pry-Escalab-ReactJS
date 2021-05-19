@@ -1,0 +1,2 @@
+(self.webpackChunkpokeapi_redux=self.webpackChunkpokeapi_redux||[]).push([[771],{5771:function(e,t,n){"use strict";n.r(t);var r=n(7294),u=n(3727);t.default=function(){return r.createElement("div",null,r.createElement("h3",null,"404 - Notfound"),r.createElement(u.rU,{className:"btn btn-dark",to:"/"},"Volver"))}}}]);
+//# sourceMappingURL=771.bundle.js.map

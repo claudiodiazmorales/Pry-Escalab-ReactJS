@@ -3,8 +3,8 @@ import thunk from 'redux-thunk';
 
 import pokeReducer from './pokemonDucks.js';
 import userReducer, {readUserActiveAction} from './userDucks';
-
-
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 const rootReducer = combineReducers({
   pokemons: pokeReducer,
