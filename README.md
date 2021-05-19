@@ -1,6 +1,6 @@
 ![pokemon_logo_PNG14](https://user-images.githubusercontent.com/65296641/118738594-6b5ccd00-b815-11eb-8f09-82e54bd6905f.png)
 
-En esta web podrás ver el detalle de cada pokémon. \
+En esta web podrás ver el detalle de cada pokémon.
 
 
 # Recursos utilizados:
