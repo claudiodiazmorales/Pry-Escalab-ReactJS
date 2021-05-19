@@ -1,5 +1,13 @@
 ![pokemon_logo_PNG14](https://user-images.githubusercontent.com/65296641/118738594-6b5ccd00-b815-11eb-8f09-82e54bd6905f.png)
 
+API Pokémon + Axios
+Router
+Redux
+Hooks
+Lazy
+Bootstrap
+Firebase (Auth Google + firestore + storage)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
