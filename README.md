@@ -6,7 +6,7 @@ Redux\
 Hooks\
 Lazy\
 Bootstrap\
-Firebase (Auth Google + firestore + storage)\
+Firebase (Auth Google + firestore + storage)
 
 # Getting Started with Create React App
 
