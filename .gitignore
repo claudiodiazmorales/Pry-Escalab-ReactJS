@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+
+# src
 /src/firebase/firebase.js
 
 # testing
