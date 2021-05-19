@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 ![img1]
-[img1]: https://github.com/claudiodiazmorales/Pry-Escalab-ReactJS/blob/master/src/assets/img/pokemon_logo_PNG14.png
+[img1]: (https://github.com/claudiodiazmorales/Pry-Escalab-ReactJS/blob/master/src/assets/img/pokemon_logo_PNG14.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
