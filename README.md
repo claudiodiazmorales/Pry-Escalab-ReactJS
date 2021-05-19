@@ -1,9 +1,11 @@
 ![pokemon_logo_PNG14](https://user-images.githubusercontent.com/65296641/118738594-6b5ccd00-b815-11eb-8f09-82e54bd6905f.png)
 
 API Pokémon + Axios\
+React JS\
 Router\
 Redux\
-Hooks\
+Hooks (useState + useEffect + useDispatch + useSelector) \
+redux-thunk \
 Lazy\
 Bootstrap\
 Firebase (Auth Google + firestore + storage)
