@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[img1]: /src/assets/img/pokemon_logo_PNG14.PNG
+[img1]: (/src/assets/img/pokemon_logo_PNG14.PNG)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
