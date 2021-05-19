@@ -13,7 +13,11 @@ Hooks (useState + useEffect + useDispatch + useSelector) \
 redux-thunk \
 Lazy\
 Bootstrap\
-Firebase (Auth Google + firestore + storage)
+Firebase (Auth Google + firestore + storage) \
+Webpack \
+Babel \
+Deploy Vercel: https://pokeapi-redux.vercel.app/login
+
 
 # Getting Started with Create React App
 
